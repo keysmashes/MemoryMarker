@@ -20,7 +20,7 @@ public unsafe class AddonFieldMarkerController : IDisposable {
     }
 
     private void OnPostUpdate(AddonEvent eventType, AddonArgs args) {
-        var addon = (AddonFieldMarker*) args.Addon;
+        var addon = (AddonFieldMarker*) args.Addon.Address;
         if (!System.Configuration.FieldMarkerData.TryGetValue(Service.ClientState.TerritoryType, out var value)) return;
 
         var configChanged = false;
@@ -71,7 +71,7 @@ public unsafe class AddonFieldMarkerController : IDisposable {
     }
 
     private void OnPreDraw(AddonEvent eventType, AddonArgs args) {
-        var addon = (AddonFieldMarker*) args.Addon;
+        var addon = (AddonFieldMarker*) args.Addon.Address;
         if (!System.Configuration.FieldMarkerData.TryGetValue(Service.ClientState.TerritoryType, out var value)) return;
 
         foreach (var index in Enumerable.Range(0, 5)) {
@@ -80,7 +80,7 @@ public unsafe class AddonFieldMarkerController : IDisposable {
 
             var nodeId = (uint) (21 + index * 2);
 
-            var buttonNode = addon->GetButtonNodeById(nodeId);
+            var buttonNode = addon->GetComponentButtonById(nodeId);
             if (buttonNode is null) continue;
 
             var desiredLabel = $"{entryIndex + 1}. {name}";
