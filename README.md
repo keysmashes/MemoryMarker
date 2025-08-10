@@ -1,5 +1,5 @@
 # MemoryMarker
-[![Download count](https://img.shields.io/endpoint?url=https://qzysathwfhebdai6xgauhz4q7m0mzmrf.lambda-url.us-east-1.on.aws/MemoryMarker)](https://github.com/MidoriKami/MemoryMarker)
+[![Download count](https://img.shields.io/endpoint?url=https://qzysathwfhebdai6xgauhz4q7m0mzmrf.lambda-url.us-east-1.on.aws/MemoryMarker)](https://github.com/keysmashes/MemoryMarker)
 
 Ever forget which waymark slot holds your pre-fight positions? Which waymarks are for pugs and not your static?
 
